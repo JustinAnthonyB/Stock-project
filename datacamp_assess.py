@@ -83,3 +83,62 @@ class Planet:
 e = Planet("Earth", 12742)
 
 e.name, e.diameter_km
+
+
+class AstroBody:
+    description = 'Natural entity in the observable universe.'    
+
+class Star(AstroBody):
+    pass
+
+sun = Star()
+
+sun.description
+
+# 'Natural entity in the observable universe.'
+
+def make_dict(**kwargs):
+    return kwargs
+
+make_dict(a = 1, b = 2)
+# {'a': 1, 'b': 2}
+
+def add_many(*args):
+    s = 0
+    for n in args:
+        s += n
+    print(s)
+
+add_many(100, 50, 3)
+
+# 153
+
+def factorial(n):
+    """returns n!"""
+    return 1 if n < 2 else n * factorial(n-1)
+
+factorial.__doc__
+
+# 'returns n!'
+
+import random
+random.seed(2427)
+
+def efficient_sample(n):
+  x = [random.random() for i in range(n)]
+  return x
+
+efficient_sample(20)
+
+d = {
+    'apple': 1,
+    'banana': 2,
+    'coconut': 3
+}
+
+d['durian'] = 4
+
+d
+
+# {'apple': 1, 'banana': 2, 'coconut': 3, 'durian': 4}
+
